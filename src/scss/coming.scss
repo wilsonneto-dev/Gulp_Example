@@ -1,0 +1,133 @@
+@import '_fonts.scss';
+@import '_prevent-defaults.scss';
+@import '_animations.scss';
+@import '_vars.scss';
+
+body {
+  min-height: 100vh;
+  color: $color-text;
+  background: linear-gradient(#110f10, #69110f 70%);
+}
+
+.box-sized {
+  width: 90%;
+  max-width: $box-max-width;
+  margin: 0 auto;
+  position: relative;
+
+  .inner {
+    max-width: $box-sub-max-width;
+    margin: 0 auto;
+  }
+
+  font-family: 'Luthier bold';
+}
+
+.social-links {
+  display: inline-block;
+
+  position: absolute;
+  right: 0;
+  margin-top: 10%;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    li a img {
+      height: 22px;
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    right: 50%;
+    bottom: 0px;
+
+    ul {
+      flex-direction: row;
+      padding: 0;
+      transform: translate(50%);
+
+      li a img {
+        margin: 15px;
+      }
+    }
+  }
+}
+
+main.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 5%;
+  box-sizing: border-box;
+
+  .line-throwght {
+    display: flex;
+    align-items: center;
+    width: 60%;
+
+    h2 {
+      vertical-align: middle;
+      font-size: 37px;
+
+      font-weight: normal;
+      margin: 0 40px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    span {
+      display: inline-block;
+      border-top: 2px solid $color-text;
+      flex: 1;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      h2 {
+        font-size: 20px;
+        margin: 0 15px;
+      }
+      span {
+        border-top: 1px solid $color-text;
+      }
+    }
+  }
+
+  .logo-wrapper {
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 930;
+      margin: 0 auto;
+    }
+  }
+
+  .footer {
+    text-align: center;
+
+    span {
+      display: inline-block;
+      font-size: 25px;
+      text-transform: uppercase;
+      color: #f45728;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    img {
+      opacity: 0.2;
+      width: 100%;
+      max-width: 840px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+}
