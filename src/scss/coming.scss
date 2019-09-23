@@ -85,7 +85,7 @@ main.inner {
       flex: 1;
     }
 
-    @media (max-width: $breakpoint-mobile) {
+    @media (max-width: $breakpoint-mobile), (max-height: 700px) {
       h2 {
         font-size: 20px;
         margin: 0 15px;
@@ -122,6 +122,10 @@ main.inner {
       opacity: 0.2;
       width: 100%;
       max-width: 840px;
+      @media (max-height: 700px)
+      {
+        max-width: 600px;
+      }
     }
 
     @media (max-width: $breakpoint-mobile) {
