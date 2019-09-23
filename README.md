@@ -10,7 +10,7 @@ Para rodar o projeto execute os comandos abaixo:
 ```
 
 # Instalar as dependencias
-npm i
+npm i gulp gulp-uglify gulp-sass node-sass gulp-htmlmin gulp-imagemin -D
 
 # executar o build e gerar o "www"
 npx gulp build
